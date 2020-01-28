@@ -97,9 +97,6 @@ namespace Calculator
         {
             textBox1.Text = "0";
             resultValue = 0;
-            //textBox3.Text = "";
-            //label1.Text = "";
-            //label5.Text = "";
         }
 
         private void button18_Click(object sender, EventArgs e)

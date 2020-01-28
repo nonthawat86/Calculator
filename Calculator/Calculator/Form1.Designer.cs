@@ -76,7 +76,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
             this.textBox2.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBox2.Size = new System.Drawing.Size(312, 337);
+            this.textBox2.Size = new System.Drawing.Size(333, 337);
             this.textBox2.TabIndex = 10000;
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -114,7 +114,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(390, 41);
-            this.textBox1.TabIndex = 1000;
+            this.textBox1.TabIndex = 10000;
             this.textBox1.Text = "0";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -369,9 +369,10 @@
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(416, 3);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label3.Location = new System.Drawing.Point(424, 3);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(14, 13);
+            this.label3.Size = new System.Drawing.Size(16, 16);
             this.label3.TabIndex = 100002;
             this.label3.Text = "X";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -411,7 +412,7 @@
             this.bunifuImageButton1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuImageButton1.Image = global::Calculator.Properties.Resources.bin;
             this.bunifuImageButton1.ImageActive = null;
-            this.bunifuImageButton1.Location = new System.Drawing.Point(706, 422);
+            this.bunifuImageButton1.Location = new System.Drawing.Point(748, 422);
             this.bunifuImageButton1.Name = "bunifuImageButton1";
             this.bunifuImageButton1.Size = new System.Drawing.Size(25, 25);
             this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -422,9 +423,9 @@
             // 
             // button18
             // 
-            this.button18.Location = new System.Drawing.Point(418, 199);
+            this.button18.Location = new System.Drawing.Point(425, 206);
             this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(23, 58);
+            this.button18.Size = new System.Drawing.Size(22, 58);
             this.button18.TabIndex = 100006;
             this.button18.Text = ">>>";
             this.button18.UseVisualStyleBackColor = true;
@@ -432,7 +433,7 @@
             // 
             // button21
             // 
-            this.button21.Location = new System.Drawing.Point(766, 201);
+            this.button21.Location = new System.Drawing.Point(779, 208);
             this.button21.Name = "button21";
             this.button21.Size = new System.Drawing.Size(23, 56);
             this.button21.TabIndex = 100006;
