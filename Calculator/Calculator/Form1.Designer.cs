@@ -152,6 +152,7 @@
             this.button3.TabIndex = 3;
             this.button3.Text = "%";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -337,6 +338,7 @@
             // 
             this.button20.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.button20.ForeColor = System.Drawing.Color.Black;
             this.button20.Location = new System.Drawing.Point(310, 383);
             this.button20.Name = "button20";
             this.button20.Size = new System.Drawing.Size(92, 55);
@@ -367,7 +369,7 @@
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(415, 3);
+            this.label3.Location = new System.Drawing.Point(416, 3);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(14, 13);
             this.label3.TabIndex = 100002;
@@ -420,9 +422,9 @@
             // 
             // button18
             // 
-            this.button18.Location = new System.Drawing.Point(411, 169);
+            this.button18.Location = new System.Drawing.Point(418, 199);
             this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(23, 184);
+            this.button18.Size = new System.Drawing.Size(23, 58);
             this.button18.TabIndex = 100006;
             this.button18.Text = ">>>";
             this.button18.UseVisualStyleBackColor = true;
@@ -430,9 +432,9 @@
             // 
             // button21
             // 
-            this.button21.Location = new System.Drawing.Point(758, 169);
+            this.button21.Location = new System.Drawing.Point(766, 201);
             this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(23, 184);
+            this.button21.Size = new System.Drawing.Size(23, 56);
             this.button21.TabIndex = 100006;
             this.button21.Text = "<<<";
             this.button21.UseVisualStyleBackColor = true;
@@ -442,13 +444,13 @@
             // 
             this.textBox3.BackColor = System.Drawing.SystemColors.Control;
             this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox3.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.textBox3.Location = new System.Drawing.Point(136, 30);
+            this.textBox3.Location = new System.Drawing.Point(12, 30);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(266, 33);
-            this.textBox3.TabIndex = 100007;
+            this.textBox3.Size = new System.Drawing.Size(390, 33);
+            this.textBox3.TabIndex = 10000000;
             this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // Form1
@@ -456,7 +458,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(441, 459);
+            this.ClientSize = new System.Drawing.Size(442, 459);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.button21);
             this.Controls.Add(this.button18);

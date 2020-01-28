@@ -16,6 +16,7 @@ namespace Calculator
         Double resultValue = 0;
         String operatonPerformed = "";
         bool isOperatonPerformed = false;
+        string Status="";
         public Form1()
         {
             InitializeComponent();
@@ -57,26 +58,22 @@ namespace Calculator
             if (resultValue != 0)
             {
                 button20_Click(sender, e);
-                //btEqual_Click.PerformClick();
                 operatonPerformed = button.Text;
                 resultValue = Double.Parse(textBox1.Text);
-                operatonPerformed = button.Text;
                 label1.Text = resultValue + " " + operatonPerformed;
                 textBox3.AppendText(operatonPerformed);
                 isOperatonPerformed = true;
-            
             }
             else
             {
                 operatonPerformed = button.Text;
                 resultValue = Double.Parse(textBox1.Text);
-                operatonPerformed = button.Text;
                 label1.Text = resultValue + " " + operatonPerformed;
                 if (textBox1.Text != "0")
                 {
                     textBox3.AppendText(operatonPerformed);
                 }
-                
+                Status = "+";
                 isOperatonPerformed = true;
             }
 
@@ -100,7 +97,7 @@ namespace Calculator
         {
             textBox1.Text = "0";
             resultValue = 0;
-            textBox3.Text = "";
+            //textBox3.Text = "";
             //label1.Text = "";
             //label5.Text = "";
         }
@@ -124,6 +121,20 @@ namespace Calculator
 
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+         
+            if (operatonPerformed == "+" || operatonPerformed == "-")
+            {
+                textBox1.Text = ((Double.Parse(textBox1.Text) / 100)* resultValue).ToString();
+            }
+            else
+            {
+                textBox1.Text = (Double.Parse(textBox1.Text) / 100).ToString();
+            }
+            
+        }
+
         private void button20_Click(object sender, EventArgs e)
         {
             label5.Text = Double.Parse(textBox1.Text).ToString();
@@ -134,6 +145,7 @@ namespace Calculator
 
                     textBox1.Text = (resultValue + Double.Parse(textBox1.Text)).ToString();
                     sum = textBox1.Text;
+
                     break;
                 case "-":
                     textBox1.Text = (resultValue - Double.Parse(textBox1.Text)).ToString();
@@ -147,12 +159,19 @@ namespace Calculator
                     textBox1.Text = (resultValue / Double.Parse(textBox1.Text)).ToString();
                     sum = textBox1.Text;
                     break;
+                case "%":
+                    textBox1.Text = ((resultValue / Double.Parse(textBox1.Text)) *100).ToString();
+                    break;
                 default:
                     break;
             }
             textBox2.AppendText(num1 + " = " + "\r\n");
             textBox2.AppendText(sum + "\r\n\n");
-            textBox3.AppendText(" = "+ sum);
+            //if (textBox1.Text !="0")
+            //{
+            //    textBox3.AppendText(" = " + sum);
+            //}
+          
             //label5.Text = "";
             //label1.Text = "";
         }
