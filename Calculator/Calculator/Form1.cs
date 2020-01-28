@@ -12,7 +12,7 @@ namespace Calculator
 {
     public partial class Form1 : Form
     {
-        string num1, num2, sum;
+        string num1,  sum;
         Double resultValue = 0;
         String operatonPerformed = "";
         bool isOperatonPerformed = false;
@@ -40,11 +40,13 @@ namespace Calculator
                 if (!textBox1.Text.Contains("."))
                 {
                     textBox1.Text = textBox1.Text + button.Text;
+                    textBox3.AppendText(button.Text);
                 }
             }
             else
             {
                 textBox1.Text = textBox1.Text + button.Text;
+                textBox3.AppendText(button.Text);
             }
 
         }
@@ -54,11 +56,13 @@ namespace Calculator
 
             if (resultValue != 0)
             {
+                button20_Click(sender, e);
                 //btEqual_Click.PerformClick();
                 operatonPerformed = button.Text;
                 resultValue = Double.Parse(textBox1.Text);
                 operatonPerformed = button.Text;
                 label1.Text = resultValue + " " + operatonPerformed;
+                textBox3.AppendText(operatonPerformed);
                 isOperatonPerformed = true;
             
             }
@@ -68,6 +72,11 @@ namespace Calculator
                 resultValue = Double.Parse(textBox1.Text);
                 operatonPerformed = button.Text;
                 label1.Text = resultValue + " " + operatonPerformed;
+                if (textBox1.Text != "0")
+                {
+                    textBox3.AppendText(operatonPerformed);
+                }
+                
                 isOperatonPerformed = true;
             }
 
@@ -80,25 +89,45 @@ namespace Calculator
             resultValue = 0;
             label1.Text = "";
             label5.Text = "";
+            textBox3.Text = "";
         }
 
         private void bunifuImageButton1_Click(object sender, EventArgs e)
         {
             textBox2.Clear();
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             textBox1.Text = "0";
             resultValue = 0;
+            textBox3.Text = "";
             //label1.Text = "";
             //label5.Text = "";
         }
+
+        private void button18_Click(object sender, EventArgs e)
+        {
+            this.Width = 797;
+            button18.Visible = false;
+            button21.Visible = true;
+        }
+
+        private void button21_Click(object sender, EventArgs e)
+        {
+            this.Width = 441;
+            button18.Visible = true;
+            button21.Visible = false;
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void button20_Click(object sender, EventArgs e)
         {
             label5.Text = Double.Parse(textBox1.Text).ToString();
-            num1 = label1.Text;
-            num2 = label5.Text;
+            num1 = label1.Text +" "+ label5.Text;
             switch (operatonPerformed)
             {
                 case "+":
@@ -110,7 +139,7 @@ namespace Calculator
                     textBox1.Text = (resultValue - Double.Parse(textBox1.Text)).ToString();
                     sum = textBox1.Text;
                     break;
-                case "*":
+                case "x":
                     textBox1.Text = (resultValue * Double.Parse(textBox1.Text)).ToString();
                     sum = textBox1.Text;
                     break;
@@ -121,8 +150,11 @@ namespace Calculator
                 default:
                     break;
             }
-            textBox2.AppendText(num1 + "  " + num2 + " = " + "\r\n");
+            textBox2.AppendText(num1 + " = " + "\r\n");
             textBox2.AppendText(sum + "\r\n\n");
+            textBox3.AppendText(" = "+ sum);
+            //label5.Text = "";
+            //label1.Text = "";
         }
     }
 }

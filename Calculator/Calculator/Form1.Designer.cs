@@ -58,6 +58,9 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label5 = new System.Windows.Forms.Label();
             this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.button18 = new System.Windows.Forms.Button();
+            this.button21 = new System.Windows.Forms.Button();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             this.SuspendLayout();
@@ -68,11 +71,11 @@
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox2.Cursor = System.Windows.Forms.Cursors.Default;
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.textBox2.Location = new System.Drawing.Point(427, 79);
+            this.textBox2.Location = new System.Drawing.Point(440, 79);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
-            this.textBox2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBox2.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.textBox2.Size = new System.Drawing.Size(312, 337);
             this.textBox2.TabIndex = 10000;
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -93,7 +96,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label2.Location = new System.Drawing.Point(432, 43);
+            this.label2.Location = new System.Drawing.Point(438, 43);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(58, 20);
             this.label2.TabIndex = 100000;
@@ -106,6 +109,7 @@
             this.textBox1.Cursor = System.Windows.Forms.Cursors.Default;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.textBox1.Location = new System.Drawing.Point(12, 73);
+            this.textBox1.MaxLength = 16;
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
@@ -205,7 +209,7 @@
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(92, 55);
             this.button8.TabIndex = 8;
-            this.button8.Text = "*";
+            this.button8.Text = "x";
             this.button8.UseVisualStyleBackColor = false;
             this.button8.Click += new System.EventHandler(this.operator_click);
             // 
@@ -361,8 +365,9 @@
             // 
             // label3
             // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(732, 4);
+            this.label3.Location = new System.Drawing.Point(415, 3);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(14, 13);
             this.label3.TabIndex = 100002;
@@ -383,6 +388,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(62, 20);
             this.tableLayoutPanel1.TabIndex = 100003;
+            this.tableLayoutPanel1.Visible = false;
             // 
             // label5
             // 
@@ -412,12 +418,48 @@
             this.bunifuImageButton1.Zoom = 10;
             this.bunifuImageButton1.Click += new System.EventHandler(this.bunifuImageButton1_Click);
             // 
+            // button18
+            // 
+            this.button18.Location = new System.Drawing.Point(411, 169);
+            this.button18.Name = "button18";
+            this.button18.Size = new System.Drawing.Size(23, 184);
+            this.button18.TabIndex = 100006;
+            this.button18.Text = ">>>";
+            this.button18.UseVisualStyleBackColor = true;
+            this.button18.Click += new System.EventHandler(this.button18_Click);
+            // 
+            // button21
+            // 
+            this.button21.Location = new System.Drawing.Point(758, 169);
+            this.button21.Name = "button21";
+            this.button21.Size = new System.Drawing.Size(23, 184);
+            this.button21.TabIndex = 100006;
+            this.button21.Text = "<<<";
+            this.button21.UseVisualStyleBackColor = true;
+            this.button21.Click += new System.EventHandler(this.button21_Click);
+            // 
+            // textBox3
+            // 
+            this.textBox3.BackColor = System.Drawing.SystemColors.Control;
+            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.textBox3.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.textBox3.Location = new System.Drawing.Point(136, 30);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(266, 33);
+            this.textBox3.TabIndex = 100007;
+            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(751, 459);
+            this.ClientSize = new System.Drawing.Size(441, 459);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.button21);
+            this.Controls.Add(this.button18);
             this.Controls.Add(this.bunifuImageButton1);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.label3);
@@ -449,6 +491,7 @@
             this.Opacity = 0.98D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
@@ -487,6 +530,9 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label5;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
+        private System.Windows.Forms.Button button18;
+        private System.Windows.Forms.Button button21;
+        private System.Windows.Forms.TextBox textBox3;
     }
 }
 
