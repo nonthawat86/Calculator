@@ -16,7 +16,6 @@ namespace Calculator
         Double resultValue = 0;
         String operatonPerformed = "";
         bool isOperatonPerformed = false;
-        string Status="";
         public Form1()
         {
             InitializeComponent();
@@ -26,8 +25,6 @@ namespace Calculator
         {
             Application.Exit();
         }
-
-       
         private void button_click(object sender, EventArgs e)
         {
             if ((textBox1.Text == "0") || (isOperatonPerformed))
@@ -49,7 +46,6 @@ namespace Calculator
                 textBox1.Text = textBox1.Text + button.Text;
                 textBox3.AppendText(button.Text);
             }
-
         }
         private void operator_click(object sender, EventArgs e)
         {
@@ -73,13 +69,9 @@ namespace Calculator
                 {
                     textBox3.AppendText(operatonPerformed);
                 }
-                Status = "+";
                 isOperatonPerformed = true;
             }
-
-
         }
-
         private void button2_Click(object sender, EventArgs e)
         {
             textBox1.Text = "0";
@@ -88,7 +80,6 @@ namespace Calculator
             label5.Text = "";
             textBox3.Text = "";
         }
-
         private void bunifuImageButton1_Click(object sender, EventArgs e)
         {
             textBox2.Clear();
@@ -98,29 +89,24 @@ namespace Calculator
             textBox1.Text = "0";
             resultValue = 0;
         }
-
         private void button18_Click(object sender, EventArgs e)
         {
             this.Width = 797;
             button18.Visible = false;
             button21.Visible = true;
         }
-
         private void button21_Click(object sender, EventArgs e)
         {
             this.Width = 441;
             button18.Visible = true;
             button21.Visible = false;
         }
-
         private void Form1_Load(object sender, EventArgs e)
         {
 
         }
-
         private void button3_Click(object sender, EventArgs e)
         {
-         
             if (operatonPerformed == "+" || operatonPerformed == "-")
             {
                 textBox1.Text = ((Double.Parse(textBox1.Text) / 100)* resultValue).ToString();
@@ -131,7 +117,6 @@ namespace Calculator
             }
             
         }
-
         private void button20_Click(object sender, EventArgs e)
         {
             label5.Text = Double.Parse(textBox1.Text).ToString();
@@ -164,13 +149,6 @@ namespace Calculator
             }
             textBox2.AppendText(num1 + " = " + "\r\n");
             textBox2.AppendText(sum + "\r\n\n");
-            //if (textBox1.Text !="0")
-            //{
-            //    textBox3.AppendText(" = " + sum);
-            //}
-          
-            //label5.Text = "";
-            //label1.Text = "";
         }
     }
 }
